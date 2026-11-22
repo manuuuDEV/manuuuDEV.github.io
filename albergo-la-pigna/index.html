@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1A2E23">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <title>Albergo Ristorante La Pigna — Croce di Salven, Borno (BS)</title>
+  <meta name="description" content="Albergo Ristorante La Pigna a 1.200 m sull'Altopiano del Sole, Borno (Valle Camonica). Camere panoramiche, cucina tipica camuna, menù digitale e prenotazioni dirette senza commissioni.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Albergo Ristorante La Pigna Home">
+        <img src="assets/logo.png" alt="Albergo Ristorante La Pigna" class="brand-logo" width="150" height="60">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="#albergo" data-i18n="nav_hotel">Albergo</a>
+        <a href="#ristorante" data-i18n="nav_menu">Ristorante &amp; Menù</a>
+        <a href="#dintorni" data-i18n="nav_area">Dintorni</a>
+        <a href="#contatti" data-i18n="nav_contact">Contatti</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Seleziona lingua">
+          <button type="button" class="lang-btn active" data-lang="it">IT</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <a href="#prenota" class="btn btn-accent header-cta" data-i18n="nav_book">Prenota Diretto</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Apri menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <nav class="mobile-nav" aria-label="Menu mobile">
+        <a href="#albergo" class="drawer-link" data-i18n="nav_hotel">Albergo</a>
+        <a href="#ristorante" class="drawer-link" data-i18n="nav_menu">Ristorante &amp; Menù</a>
+        <a href="#dintorni" class="drawer-link" data-i18n="nav_area">Dintorni</a>
+        <a href="#prenota" class="drawer-link" data-i18n="nav_book">Prenota Diretto</a>
+        <a href="#contatti" class="drawer-link" data-i18n="nav_contact">Contatti</a>
+        <div class="drawer-phones">
+          <a href="tel:+390364311694" class="drawer-phone-link">Fisso: +39 0364 311694</a>
+          <a href="tel:+393332898394" class="drawer-phone-link">Cell / WhatsApp: +39 333 289 8394</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-media">
+        <img src="assets/ext-4.jpg" alt="Albergo Ristorante La Pigna immerso nella pineta di Croce di Salven a Borno" class="hero-img">
+        <div class="hero-scrim"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-kicker">
+          <span class="dot-live"></span>
+          <span data-i18n="hero_kicker">1.200 m · Croce di Salven, Borno (BS) · Valle Camonica</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero_title">Oasi di pace tra i boschi dell'Altopiano del Sole.</h1>
+        <p class="hero-subtitle" data-i18n="hero_sub">Accoglienza familiare, camere panoramiche con balcone sul verde e cucina tipica montana con casoncelli, pizzoccheri e funghi freschi.</p>
+
+        <div class="hero-ctas">
+          <a href="#prenota" class="btn btn-accent btn-lg" data-i18n="hero_cta_book">Prenota Diretto · Zero Commissioni</a>
+          <a href="#ristorante" class="btn btn-ghost btn-lg" data-i18n="hero_cta_menu">Esplora il Menù &amp; Orari</a>
+        </div>
+
+        <ul class="hero-trust" aria-label="Punti di forza">
+          <li><strong>9+ / 10</strong> <span data-i18n="trust_rating">Valutazione ospiti</span></li>
+          <li><strong>5 min</strong> <span data-i18n="trust_ski">Piste Monte Altissimo</span></li>
+          <li><strong>Parco privato</strong> <span data-i18n="trust_park">Dehor, sdraio &amp; parcheggio</span></li>
+          <li><strong>Pet-friendly</strong> <span data-i18n="trust_pets">Animali benvenuti</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Direct Booking & Table Widget -->
+    <section class="booking-section" id="prenota">
+      <div class="container">
+        <div class="booking-card">
+          <div class="booking-header">
+            <div>
+              <span class="eyebrow" data-i18n="book_eyebrow">Contatto Diretto Senza Intermediari</span>
+              <h2 class="section-title-sm" data-i18n="book_title">Prenota una Camera o un Tavolo in 30 Secondi</h2>
+            </div>
+            <div class="booking-tabs" role="tablist" aria-label="Tipo di prenotazione">
+              <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="room" id="tabRoom" data-i18n="tab_room">Camera Albergo</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="table" id="tabTable" data-i18n="tab_table">Tavolo Ristorante</button>
+            </div>
+          </div>
+
+          <!-- Room Form -->
+          <div class="tab-panel active" id="panelRoom" role="tabpanel" aria-labelledby="tabRoom">
+            <form id="roomForm" class="booking-form" novalidate>
+              <div class="form-grid">
+                <label class="field">
+                  <span data-i18n="lbl_checkin">Check-in</span>
+                  <input type="date" id="roomCheckin" required>
+                </label>
+                <label class="field">
+                  <span data-i18n="lbl_checkout">Check-out</span>
+                  <input type="date" id="roomCheckout" required>
+                </label>
+                <div class="field">
+                  <span data-i18n="lbl_adults">Adulti</span>
+                  <div class="stepper">
+                    <button type="button" class="step-btn" data-target="adultsCount" data-delta="-1" aria-label="Riduci adulti">−</button>
+                    <output id="adultsCount">2</output>
+                    <button type="button" class="step-btn" data-target="adultsCount" data-delta="1" aria-label="Aumenta adulti">+</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <span data-i18n="lbl_children">Bambini</span>
+                  <div class="stepper">
+                    <button type="button" class="step-btn" data-target="childrenCount" data-delta="-1" aria-label="Riduci bambini">−</button>
+                    <output id="childrenCount">0</output>
+                    <button type="button" class="step-btn" data-target="childrenCount" data-delta="1" aria-label="Aumenta bambini">+</button>
+                  </div>
+                </div>
+                <label class="field field-wide">
+                  <span data-i18n="lbl_roomtype">Tipologia Camera</span>
+                  <select id="roomType">
+                    <option value="Camera Matrimoniale con Balcone Panoramico">Camera Matrimoniale con Balcone Panoramico</option>
+                    <option value="Camera Familiare Travi a Vista">Camera Familiare Travi a Vista</option>
+                    <option value="Camera in Dependance Moderna">Camera in Dependance Moderna</option>
+                  </select>
+                </label>
+                <label class="field field-wide">
+                  <span data-i18n="lbl_board">Trattamento</span>
+                  <select id="boardType">
+                    <option value="Pernottamento e Colazione">Pernottamento e Colazione</option>
+                    <option value="Mezza Pensione (Cucina Tipica)">Mezza Pensione (Cucina Tipica)</option>
+                    <option value="Pensione Completa">Pensione Completa</option>
+                    <option value="Solo Pernottamento">Solo Pernottamento</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="extra-row">
+                <span class="extra-label" data-i18n="lbl_extras">Esigenze particolari:</span>
+                <div class="chip-group">
+                  <label class="check-chip"><input type="checkbox" value="Animale domestico al seguito" class="room-extra"> <span data-i18n="ext_pet">Pet-Friendly</span></label>
+                  <label class="check-chip"><input type="checkbox" value="Deposito sci" class="room-extra"> <span data-i18n="ext_ski">Deposito Sci</span></label>
+                  <label class="check-chip"><input type="checkbox" value="Richiesta culla" class="room-extra"> <span data-i18n="ext_crib">Culla bimbi</span></label>
+                </div>
+              </div>
+
+              <div class="form-grid form-grid-2">
+                <label class="field">
+                  <span data-i18n="lbl_name">Il tuo Nome</span>
+                  <input type="text" id="roomGuestName" placeholder="Es. Marco Rossi">
+                </label>
+                <label class="field">
+                  <span data-i18n="lbl_notes">Note o richieste aggiuntive</span>
+                  <input type="text" id="roomNotes" placeholder="Es. Orario di arrivo previsto, camera tranquilla...">
+                </label>
+              </div>
+
+              <div class="booking-preview" id="roomPreview">
+                <div class="preview-meta">
+                  <span class="nights-pill" id="nightsBadge">2 notti</span>
+                  <span data-i18n="preview_note">La richiesta parte direttamente verso la direzione, senza portali né costi di agenzia.</span>
+                </div>
+                <p class="preview-text" id="roomSummaryText"></p>
+              </div>
+
+              <div class="form-actions">
+                <a href="#" id="roomWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" data-i18n="btn_wa_room">Invia Richiesta su WhatsApp (+39 333 289 8394)</a>
+                <a href="#" id="roomMailBtn" class="btn btn-outline btn-lg" data-i18n="btn_mail_room">Richiedi via Email</a>
+              </div>
+            </form>
+          </div>
+
+          <!-- Table Form -->
+          <div class="tab-panel" id="panelTable" role="tabpanel" aria-labelledby="tabTable" hidden>
+            <form id="tableForm" class="booking-form" novalidate>
+              <div class="form-grid">
+                <label class="field">
+                  <span data-i18n="lbl_tdate">Data</span>
+                  <input type="date" id="tableDate" required>
+                </label>
+                <label class="field">
+                  <span data-i18n="lbl_slot">Fascia Oraria</span>
+                  <select id="tableSlot">
+                    <option value="Pranzo (12:00 - 14:00)">Pranzo (12:00 – 14:00)</option>
+                    <option value="Cena (19:00 - 21:30)">Cena (19:00 – 21:30)</option>
+                  </select>
+                </label>
+                <div class="field">
+                  <span data-i18n="lbl_guests">Coperti</span>
+                  <div class="stepper">
+                    <button type="button" class="step-btn" data-target="tableGuestsCount" data-delta="-1" aria-label="Riduci coperti">−</button>
+                    <output id="tableGuestsCount">4</output>
+                    <button type="button" class="step-btn" data-target="tableGuestsCount" data-delta="1" aria-label="Aumenta coperti">+</button>
+                  </div>
+                </div>
+                <label class="field">
+                  <span data-i18n="lbl_occasion">Occasione</span>
+                  <select id="tableOccasion">
+                    <option value="Pranzo o Cena alla carta">Pranzo o Cena alla carta</option>
+                    <option value="Tavolata di famiglia">Tavolata di famiglia</option>
+                    <option value="Banchetto / Ricorrenza">Banchetto / Ricorrenza</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="alert-thursday" id="thursdayAlert" hidden role="status">
+                <strong data-i18n="thu_title">Giorno di chiusura settimanale:</strong>
+                <span data-i18n="thu_msg">il giovedì il ristorante osserva il turno di chiusura. Scegli un altro giorno tra lunedì, martedì, mercoledì, venerdì, sabato o domenica.</span>
+              </div>
+
+              <div class="form-grid form-grid-2">
+                <label class="field">
+                  <span data-i18n="lbl_name">Il tuo Nome</span>
+                  <input type="text" id="tableGuestName" placeholder="Es. Laura Bianchi">
+                </label>
+                <label class="field">
+                  <span data-i18n="lbl_allergies">Note o allergie alimentari</span>
+                  <input type="text" id="tableNotes" placeholder="Es. Seggiolone bimbo, intolleranza al glutine, dehor esterno...">
+                </label>
+              </div>
+
+              <div class="booking-preview">
+                <p class="preview-text" id="tableSummaryText"></p>
+              </div>
+
+              <div class="form-actions">
+                <a href="#" id="tableWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg" data-i18n="btn_wa_table">Prenota Tavolo su WhatsApp</a>
+                <a href="tel:+390364311694" class="btn btn-outline btn-lg" data-i18n="btn_call_fixed">Chiama +39 0364 311694</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotel & Rooms -->
+    <section class="section" id="albergo">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="hotel_eyebrow">Ospitalità Alpina dal Cuore Caldo</span>
+          <h2 class="section-title" data-i18n="hotel_title">L'Albergo &amp; Le Nostre Camere</h2>
+          <p class="section-desc" data-i18n="hotel_desc">Ampie e luminose, arredate con travi a vista e boiserie in legno di montagna: ogni stanza dispone di bagno privato con finestra e affaccio panoramico sul verde o sui balconi della pineta.</p>
+        </div>
+
+        <div class="gallery-bento">
+          <button type="button" class="bento-item bento-lg gallery-trigger" data-idx="0" aria-label="Apri foto facciata Albergo La Pigna">
+            <img src="assets/ext-4.jpg" alt="Facciata alpina e dehor con ombrelloni dell'Albergo Ristorante La Pigna" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_ext">Facciata, dehor e giardino a Croce di Salven</span>
+          </button>
+          <button type="button" class="bento-item gallery-trigger" data-idx="1" aria-label="Apri foto camera con travi a vista e balcone">
+            <img src="assets/room-1.jpg" alt="Camera luminosa con travi a vista in legno e portafinestra sul balcone" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_room1">Camere con travi a vista &amp; balcone</span>
+          </button>
+          <button type="button" class="bento-item gallery-trigger" data-idx="2" aria-label="Apri foto camera ristrutturata con boiserie">
+            <img src="assets/room-4.jpg" alt="Camera rinnovata con boiserie in legno naturale" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_room4">Dependance &amp; interni in legno</span>
+          </button>
+          <button type="button" class="bento-item gallery-trigger" data-idx="3" aria-label="Apri foto vista dal balcone privato">
+            <img src="assets/room-3.jpg" alt="Vista panoramica sulle pinete di Borno dal balcone privato della camera" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_balcony">Vista dal balcone sui boschi</span>
+          </button>
+        </div>
+
+        <div class="rooms-grid">
+          <article class="room-card">
+            <div class="room-body">
+              <span class="room-tag" data-i18n="r1_tag">Vista Pineta</span>
+              <h3 data-i18n="r1_name">Matrimoniale Panoramica</h3>
+              <p data-i18n="r1_desc">Ideale per un weekend romantico in montagna: balcone privato sul verde, travi a vista, bagno con finestra, Wi-Fi e TV a schermo piatto.</p>
+              <ul class="room-specs">
+                <li>2 ospiti</li>
+                <li>Balcone privato</li>
+                <li>Bagno con finestra</li>
+              </ul>
+              <button type="button" class="btn-link pick-room" data-room="Camera Matrimoniale con Balcone Panoramico" data-i18n="r_cta">Seleziona per preventivo diretto →</button>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-body">
+              <span class="room-tag" data-i18n="r2_tag">Famiglie &amp; Gruppi</span>
+              <h3 data-i18n="r2_name">Camera Familiare</h3>
+              <p data-i18n="r2_desc">Spazi generosi pensati per adulti e bambini, con possibilità di letto aggiunto o culla, affacci luminosi e accesso diretto al parco giochi sul retro.</p>
+              <ul class="room-specs">
+                <li>3–4 ospiti</li>
+                <li>Adatta a bambini</li>
+                <li>Parco &amp; sdraio</li>
+              </ul>
+              <button type="button" class="btn-link pick-room" data-room="Camera Familiare Travi a Vista" data-i18n="r_cta">Seleziona per preventivo diretto →</button>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-body">
+              <span class="room-tag" data-i18n="r3_tag">Rinnovata</span>
+              <h3 data-i18n="r3_name">Camera in Dependance</h3>
+              <p data-i18n="r3_desc">Ambienti caldi con boiserie artigianale nella nostra dependance immersa nella quiete: comodissima per coppie, sportivi e soggiorni sciistici.</p>
+              <ul class="room-specs">
+                <li>2–3 ospiti</li>
+                <li>Boiserie alpina</li>
+                <li>Deposito sci</li>
+              </ul>
+              <button type="button" class="btn-link pick-room" data-room="Camera in Dependance Moderna" data-i18n="r_cta">Seleziona per preventivo diretto →</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="amenities-strip">
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am1">Parco privato con sdraio e giochi bimbi</span></div>
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am2">Dehor esterno con tavolini e ombrelloni</span></div>
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am3">Ampio parcheggio gratuito in loco</span></div>
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am4">Deposito sci &amp; vicinanza impianti</span></div>
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am5">Soggiorni comuni per lettura e relax</span></div>
+          <div class="amenity-pill"><span>✓</span> <span data-i18n="am6">Animali domestici ammessi</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant & Interactive Digital Menu -->
+    <section class="section section-alt" id="ristorante">
+      <div class="container">
+        <div class="section-head-split">
+          <div>
+            <span class="eyebrow" data-i18n="rest_eyebrow">Tradizione, Genuinità e Territorio</span>
+            <h2 class="section-title" data-i18n="rest_title">Il Ristorante &amp; Menù Digitale</h2>
+            <p class="section-desc" data-i18n="rest_desc">Cucina tipica camuna e di montagna con salumi, ricotte, burro e formaggi prodotti sugli alpeggi del comprensorio, funghi raccolti nei nostri boschi e pasta fresca fatta in casa.</p>
+          </div>
+          <div class="hours-box">
+            <div class="live-status" id="liveOpenStatus">
+              <span class="status-dot"></span>
+              <span id="liveOpenText">Verifica orario...</span>
+            </div>
+            <p class="hours-lines">
+              <strong data-i18n="hrs_label">Orari cucina:</strong> 12:00 – 14:00 · 19:00 – 21:30<br>
+              <strong data-i18n="hrs_closed">Chiuso il giovedì</strong> · <span data-i18n="hrs_pay">Contanti &amp; Carte di debito</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="rest-gallery">
+          <button type="button" class="rest-photo gallery-trigger" data-idx="4" aria-label="Apri foto sala ristorante panoramica">
+            <img src="assets/rest-2.jpg" alt="Sala ristorante con vetrate panoramiche sul bosco di Croce di Salven" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_hall">Sala panoramica sul bosco</span>
+          </button>
+          <button type="button" class="rest-photo gallery-trigger" data-idx="5" aria-label="Apri foto bar e accoglienza in legno">
+            <img src="assets/rest-1.jpg" alt="Bar alpino e banco accoglienza in legno dell'Albergo La Pigna" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_bar">Bar &amp; accoglienza familiare</span>
+          </button>
+          <button type="button" class="rest-photo gallery-trigger" data-idx="6" aria-label="Apri foto buffet per banchetti e cerimonie">
+            <img src="assets/rest-4.jpg" alt="Gran buffet di salumi e specialità montane per cerimonie e banchetti" loading="lazy">
+            <span class="bento-caption" data-i18n="cap_banquet">Buffet cerimonie &amp; ricorrenze</span>
+          </button>
+        </div>
+
+        <!-- QR Interactive Menu Engine -->
+        <div class="menu-shell">
+          <div class="menu-toolbar">
+            <div class="menu-cats" role="tablist" aria-label="Categorie del menù">
+              <button type="button" class="cat-pill active" data-cat="all" data-i18n="cat_all">Tutti i Piatti</button>
+              <button type="button" class="cat-pill" data-cat="antipasti" data-i18n="cat_ant">Antipasti &amp; Alpeggio</button>
+              <button type="button" class="cat-pill" data-cat="primi" data-i18n="cat_primi">Primi Camuni</button>
+              <button type="button" class="cat-pill" data-cat="secondi" data-i18n="cat_sec">Secondi &amp; Funghi</button>
+              <button type="button" class="cat-pill" data-cat="dolci" data-i18n="cat_dolci">Dolci Caserecci</button>
+            </div>
+
+            <div class="menu-filters">
+              <div class="search-wrap">
+                <input type="search" id="menuSearch" placeholder="Cerca casoncelli, funghi, pizzoccheri..." aria-label="Cerca nel menù">
+              </div>
+              <div class="diet-chips">
+                <button type="button" class="diet-chip" data-tag="casa" data-i18n="tag_home">Fatto in casa</button>
+                <button type="button" class="diet-chip" data-tag="veg" data-i18n="tag_veg">Vegetariano</button>
+                <button type="button" class="diet-chip" data-tag="sg" data-i18n="tag_gf">Senza glutine su rich.</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="menu-demo-note" data-i18n="menu_note">Esempio dimostrativo di menù digitale interattivo (compatibile con QR code al tavolo): piatti stagionali, fuori menù dei funghi e prezzi completamente modificabili dalla direzione.</p>
+
+          <div class="menu-list" id="menuList" aria-live="polite"></div>
+
+          <div class="menu-empty" id="menuEmpty" hidden>
+            <p data-i18n="menu_empty">Nessun piatto corrisponde ai filtri selezionati.</p>
+            <button type="button" class="btn btn-outline" id="resetMenuBtn" data-i18n="menu_reset">Mostra tutto il menù</button>
+          </div>
+        </div>
+
+        <!-- Banquets Spotlight -->
+        <div class="banquet-banner">
+          <div class="banquet-text">
+            <span class="eyebrow eyebrow-light" data-i18n="banq_eye">Ampia Sala Rinnovata</span>
+            <h3 data-i18n="banq_title">Matrimoni, Banchetti &amp; Ricorrenze in Montagna</h3>
+            <p data-i18n="banq_desc">Progettiamo menù su misura per matrimoni, battesimi, comunioni e pranzi di gruppo, con ampia sala interna, dehor estivo, parco privato per le foto e possibilità di pernottamento per gli ospiti.</p>
+          </div>
+          <a href="https://wa.me/393332898394?text=Buongiorno%2C%20vorremmo%20informazioni%20per%20organizzare%20un%20banchetto%20o%20ricorrenza%20presso%20l%27Albergo%20Ristorante%20La%20Pigna." target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-lg" data-i18n="banq_cta">Chiedi Preventivo Eventi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surroundings & 4 Seasons -->
+    <section class="section" id="dintorni">
+      <div class="container">
+        <div class="section-head-split">
+          <div>
+            <span class="eyebrow" data-i18n="area_eyebrow">Borno &amp; Valle Camonica</span>
+            <h2 class="section-title" data-i18n="area_title">Natura, Sentieri &amp; Tradizioni tutto l'Anno</h2>
+            <p class="section-desc" data-i18n="area_desc">Dal parco dell'albergo partono mulattiere e sentieri CAI nei boschi. In pochi minuti si raggiungono gli impianti del Monte Altissimo, i Boschi del Giovetto e il borgo storico di Borno.</p>
+          </div>
+          <div class="season-tabs" role="group" aria-label="Stagione">
+            <button type="button" class="season-btn active" data-season="summer" data-i18n="sea_sum">Estate &amp; Sentieri</button>
+            <button type="button" class="season-btn" data-season="winter" data-i18n="sea_win">Inverno &amp; Sci</button>
+          </div>
+        </div>
+
+        <div class="area-grid">
+          <div class="area-cards" id="areaCards"></div>
+          <div class="area-photos">
+            <button type="button" class="area-photo gallery-trigger" data-idx="7" aria-label="Apri foto sentiero nei boschi di Borno">
+              <img src="assets/dint-2.jpg" alt="Escursione tra gli abeti nei boschi dell'Altopiano del Sole" loading="lazy">
+              <span class="bento-caption" data-i18n="cap_trail">Sentieri CAI &amp; Boschi del Giovetto</span>
+            </button>
+            <button type="button" class="area-photo gallery-trigger" data-idx="8" aria-label="Apri foto piazza storica di Borno la sera">
+              <img src="assets/dint-3.jpg" alt="Piazza storica illuminata di Borno in Valle Camonica" loading="lazy">
+              <span class="bento-caption" data-i18n="cap_borno">Centro storico di Borno &amp; eventi</span>
+            </button>
+            <button type="button" class="area-photo area-photo-wide gallery-trigger" data-idx="9" aria-label="Apri foto aerea valli attorno all'Albergo La Pigna">
+              <img src="assets/ext-1.jpg" alt="Vista aerea dell'Albergo La Pigna circondato dalle vette della Valle Camonica" loading="lazy">
+              <span class="bento-caption" data-i18n="cap_aerial">Croce di Salven vista dall'alto con le vette camune</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Unified Contacts -->
+    <section class="section section-dark" id="contatti">
+      <div class="container">
+        <div class="contacts-grid">
+          <div class="contacts-info">
+            <span class="eyebrow eyebrow-light" data-i18n="cnt_eye">Posizione &amp; Recapiti Diretti</span>
+            <h2 class="section-title section-title-light" data-i18n="cnt_title">Come Raggiungerci a Borno</h2>
+            <p class="contacts-lead" data-i18n="cnt_lead">Immersi nella pineta di Località Croce di Salven, a circa 4 km dal centro di Borno, con ampio parcheggio privato gratuito direttamente davanti alla struttura.</p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <span class="ci-label" data-i18n="ci_addr">Indirizzo</span>
+                <p>Via Croce Salven, 9 — 25042 Borno (BS), Italia</p>
+              </div>
+              <div class="contact-item">
+                <span class="ci-label" data-i18n="ci_phones">Telefono &amp; WhatsApp Diretto</span>
+                <div class="ci-links">
+                  <a href="tel:+390364311694">+39 0364 311694 <small>(Fisso / Fax)</small></a>
+                  <a href="https://wa.me/393332898394" target="_blank" rel="noopener noreferrer">+39 333 289 8394 <small>(Cellulare &amp; WhatsApp)</small></a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="ci-label">Email</span>
+                <div class="ci-links">
+                  <a href="mailto:albergo.pigna@libero.it">albergo.pigna@libero.it</a>
+                  <a href="mailto:info@albergolapigna-borno.it">info@albergolapigna-borno.it</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="ci-label" data-i18n="ci_hours">Orari Ristorante</span>
+                <p data-i18n="ci_hours_val">Lun–Mer e Ven–Dom: 12:00–14:00 · 19:00–21:30<br>Giovedì: chiuso per riposo settimanale</p>
+              </div>
+            </div>
+
+            <div class="contacts-btns">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=45.9456689,10.1545674" target="_blank" rel="noopener noreferrer" class="btn btn-accent" data-i18n="btn_maps">Avvia Navigatore Google Maps</a>
+              <a href="https://wa.me/393332898394" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="btn_chat_wa">Chatta su WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="map-frame-wrap">
+            <iframe
+              title="Mappa Albergo Ristorante La Pigna Borno"
+              src="https://maps.google.com/maps?q=45.9456689,10.1545674&hl=it&z=14&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Albergo Ristorante La Pigna</strong> — Via Croce Salven 9, 25042 Borno (BS) · P.IVA 00427380985 · C.F. IT04167040981
+      </div>
+      <div class="footer-credit" data-i18n="footer_demo">
+        Anteprima digitale su misura · Mazza Studio Web
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-sticky-bar" aria-label="Azioni rapide">
+    <a href="tel:+390364311694" class="sticky-act">
+      <span>📞</span>
+      <small data-i18n="st_call">Chiama</small>
+    </a>
+    <a href="#ristorante" class="sticky-act">
+      <span>🍽️</span>
+      <small data-i18n="st_menu">Menù</small>
+    </a>
+    <a href="#prenota" class="sticky-act sticky-act-primary">
+      <span>💬</span>
+      <small data-i18n="st_book">Prenota Diretto</small>
+    </a>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+    <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Foto precedente">‹</button>
+    <figure class="lb-figure">
+      <img src="" alt="" id="lbImg">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Foto successiva">›</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
