@@ -237,7 +237,7 @@
       nav_events: "Banchetti",
       nav_area: "Altopiano",
       nav_contact: "Contatti",
-      nav_book: "Prenota Diretto",
+      nav_book: "Prenota Ora",
       hero_kicker: "FAMIGLIA BERTELLI · OSPITALITÀ ALPINA IN VALLE CAMONICA",
       hero_title: "Oasi di pace tra i boschi dell'Altopiano del Sole.",
       hero_sub: "A 1.200 metri d'altitudine nella pineta di Croce di Salven: camere panoramiche in legno con balcone sul verde, cucina tipica camuna fatta in casa e accoglienza familiare in ogni stagione.",
@@ -356,7 +356,7 @@
       footer_demo: "Progetto digitale su misura · Mazza Studio Web",
       st_call: "Chiama",
       st_menu: "Menù",
-      st_book: "Prenota Diretto"
+      st_book: "Prenota Ora"
     },
     en: {
       nav_hotel: "Hotel & Rooms",
@@ -364,7 +364,7 @@
       nav_events: "Banquets",
       nav_area: "Altopiano",
       nav_contact: "Contacts",
-      nav_book: "Book Direct",
+      nav_book: "Book Now",
       hero_kicker: "BERTELLI FAMILY · ALPINE HOSPITALITY IN VALLE CAMONICA",
       hero_title: "A peaceful alpine retreat among the pines of Borno.",
       hero_sub: "At 1,200 meters in the pine forest of Croce di Salven: timber rooms with panoramic balconies, homemade Valle Camonica cuisine, and warm family hospitality in every season.",
@@ -483,7 +483,7 @@
       footer_demo: "Bespoke digital preview · Mazza Studio Web",
       st_call: "Call",
       st_menu: "Menu",
-      st_book: "Book Direct"
+      st_book: "Book Now"
     },
     de: {
       nav_hotel: "Hotel & Zimmer",
@@ -491,7 +491,7 @@
       nav_events: "Bankette",
       nav_area: "Hochplateau",
       nav_contact: "Kontakt",
-      nav_book: "Direkt Buchen",
+      nav_book: "Jetzt Buchen",
       hero_kicker: "FAMILIE BERTELLI · ALPINE GASTFREUNDSCHAFT IM VALLE CAMONICA",
       hero_title: "Eine ruhige Oase im Kiefernwald des Altopiano del Sole.",
       hero_sub: "Auf 1.200 Metern im Kiefernwald von Croce di Salven: Holzzimmer mit Panoramabalkon, hausgemachte Bergküche und herzliche Gastfreundschaft zu jeder Jahreszeit.",
@@ -610,7 +610,7 @@
       footer_demo: "Maßgeschneiderte Vorschau · Mazza Studio Web",
       st_call: "Anruf",
       st_menu: "Menü",
-      st_book: "Direkt Buchen"
+      st_book: "Jetzt Buchen"
     }
   };
 
